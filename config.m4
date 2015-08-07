@@ -6,7 +6,7 @@ AC_PREREQ(2.50)
 PHP_ARG_WITH(luasandbox, for luasandbox support,
 [  --with-luasandbox             Include luasandbox support])
 
-$GREP -m1 php-luasandbox $srcdir/debian/changelog \
+$GREP -m1 php5-luasandbox $srcdir/debian/changelog \
         | $SED -e 's/.*(/#define LUASANDBOX_VERSION "/' -e 's/).*/"/' \
         > $srcdir/luasandbox_version.h
 

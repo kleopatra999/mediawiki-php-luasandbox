@@ -54,7 +54,7 @@ override_dh_auto_test:
 override_dh_auto_install: $(install_targets)
 
 php_install:
-	INSTALL_ROOT=$(CURDIR)/debian/php-luasandbox make -C debian/build-php install
+	INSTALL_ROOT=$(CURDIR)/debian/php5-luasandbox make -C debian/build-php install
 
 hhvm_install:
 	DESTDIR=$(CURDIR)/debian/hhvm-luasandbox make -C debian/build-hhvm install
@@ -63,7 +63,7 @@ override_dh_gencontrol: $(gencontrol_targets)
 	dh_gencontrol
 
 php_gencontrol:
-	echo "php:Depends=phpapi-$(shell php-config5 --phpapi)" >> debian/php-luasandbox.substvars
+	echo "php:Depends=phpapi-$(shell php-config5 --phpapi)" >> debian/php5-luasandbox.substvars
 
 hhvm_gencontrol:
 	# HHVM does *not* ensure binary compatibility

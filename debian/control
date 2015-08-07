@@ -1,4 +1,4 @@
-Source: php-luasandbox
+Source: php5-luasandbox
 Section: web
 Priority: optional
 Maintainer: Tim Starling <tstarling@wikimedia.org>
@@ -17,7 +17,7 @@ Build-Depends: debhelper (>= 9),
 Standards-Version: 3.9.5
 Homepage: https://www.mediawiki.org/wiki/Extension:Scribunto
 
-Package: php-luasandbox
+Package: php5-luasandbox
 Architecture: any
 Depends: php5 | php5-cli, ${shlibs:Depends}, ${misc:Depends}, ${php:Depends}
 Description: Lua extension for PHP
